@@ -1,0 +1,50 @@
+Big O Calculation - Worse Case Complexity
+
+Task0:
+Algorithm:
+- 2 Print statements: Complexity O(2)
+Total Complexity: O(2)
+
+Task1:
+Algorithm:
+- initialise empty list: Complexity O(1)
+- loop through records of texts and add entries to list: Complexity O(n)
+- loop through records of calls and add entries to list: Complexity O(n)
+- Print statement: Complexity O(1)
+Total Complexity: O(1) + O(n) + O(n) + O(1) = O(2n + 2). Simplification: O(n)
+
+Task2:
+Algorithm:
+- initialise empty dictionary: Complexity O(1)
+- loop through records of calls: Complexity O(n)
+- first linear search in dict and add entry to dict: Complexity O(n)
+- second linear search in dict and add entry to dict: Complexity O(n)
+- search max value in dict: Complexity O(1)
+- print statement: Complexity O(1)
+Total Complexity: O(1) + O(n) + O(n) + O(n) + O(1) + O(1) = O(3n + 3). Simplification: O(n)
+
+Task3:
+Algorithm:
+- initialise empty List + counts: Complexity O(3)
+- loop through records of calls: Complexity O(n)
+	- if statement callFromBangalore(call): O(3)
+	- if statment mobileCalled(): Complexity O(3)
+	- else statement with codeFixedLine() => For loop: O(n + 4)
+	- if statement callFromBangalore() + callToBangalore(): O(5)
+=> Total loop: O(n^2 + 15)
+- sort list: Complexity O(n*log n)
+- print first statement: Complexity O(1)
+- print result through loop: Complexity O(n)
+- print second statement: Complexity O(1)
+Total Complexity: O(3) + O(n^2 + 15) + O(n log n) + O(1) + O(1) + O(n) + O(1) = O(n^2 + n + n*log n + 21). Simplification: O(n*log n) 
+
+Task4:
+Algorithm:
+- initialise 4 sets: Complexity O(4)
+- loop through calls and add values to set: Complexity O(n)
+- loop through texts and add values to set: Complexity O(n)
+- create new set (telemarketers) as result from differences between all 4 sets: Complexity O(1)
+- sort list: Complexity O(n*log n)
+- print statement: Complexity O(1)
+- print result through loop: Complexity O(n)
+Total Complexity: O(4) + O(n) + O(n) + O(1) + O(n*log n) + O(1) + O(n) = O(3n + n*log n + 6). Simplification: O(n*log n)
